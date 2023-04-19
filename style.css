@@ -84,7 +84,7 @@ box-shadow: #ff61241f 0px 7px 29px 0px;
   
   .sec1{
     width: 100%;
-    height: 100vh;
+    height: 300vh;
     background: linear-gradient(76.8deg, rgb(121, 45, 129) 3.6%, rgb(36, 31, 98) 90.4%);
     position: relative;
     display: flex;
