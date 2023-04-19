@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HOME SECURITY SYSTEM</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+<section class="sec1" >
+
+
+
+<nav id="navbar">
+       <div class="logo">
+		<img width="60px" height="60px" src="robot-2192617__480.webp">
+		<p class="logo2"> Home Security System </p>
+	   </div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="settings.html" class='loginbtn'  onclick="document.getElementById('Settings').style.display='block'"  style="width:auto;">Settings</a></li>
+                <li><a href="sign.html" class='loginbtn' onclick="document.getElementById('login-form').style.display='block'"  onclick="hidesetting()" style="width:auto;">Sign Up</a></li>
+                
+        </nav>
+
+<div class="Home">
+
+<div class="box">
+	<img width="800px" height="400px" src="col6.jpeg" class="img">
+</div>
+	<p class="p">Ensuring Safety in all homesteads</p>
+</div>
+
+
+        <div id='login-form'class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+                    <button type='button'onclick='register()'class='toggle-btn'>Register</button>
+
+                </div>
+                <a href="index.html" class='close' id="submit">X</a>
+
+
+                <form id='login' class='input-group-login'>
+                    <input type='email'class='input-field'placeholder='Email ' required >
+		    <input type='password'class='input-field'placeholder='Enter Password' required>
+		    <input type='checkbox'class='check-box'><span>Remember Password</span>
+		    <button  class='submit-btn' id="submit" onclick="submit()">Log In</button> 
+		 </form>
+		 <form id='register' class='input-group-register'>
+		     <input type='text'class='input-field'placeholder='First Name' required>
+		     <input type='text'class='input-field'placeholder='Last Name ' required>
+		     <input type='email'class='input-field'placeholder='Email ' required>
+		     <input type='password'class='input-field'placeholder='Enter Password' required>
+		     <input type='password'class='input-field'placeholder='Confirm Password'  required>
+		     <input type='checkbox'class='check-box'><span>I agree to the terms and conditions</span>
+                    <Button class='submit-btn' id="submit" onclick="submit()">Register</button>
+	         </form>
+
+
+            </div>
+
+
+        </div>
+
+        
+    
+    <script>
+        var x=document.getElementById('login');
+		var y=document.getElementById('register');
+		var z=document.getElementById('btn');
+		function register()
+		{
+			x.style.left='-400px';
+			y.style.left='50px';
+			z.style.left='110px';
+		}
+		function login()
+		{
+			x.style.left='50px';
+			y.style.left='450px';
+			z.style.left='0px';
+
+		}
+
+	</script>
+	<script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event) 
+        {
+            if (event.target == modal) 
+            {
+                modal.style.display = "none";
+            }
+
+            else {
+            	modal.style.display = "";
+            }
+        }
+
+        
+
+
+
+
+        var modal1 = document.getElementById('Settings');
+        window.onclick = function(event) 
+        {
+            if (event.target == modal1) 
+            {
+                modal1.style.display = "";
+            }
+        }
+
+function hidesetting() {
+  var div = document.getElementById("Settings");
+  div.style.display = "none";
+}
+
+function hidesignup() {
+  var div = document.getElementById("login-form");
+  div.style.display = "none";
+}
+
+function submit() {
+  window.location.href = "index.html";
+}
+
+
+
+    </script>
+
+
+	
+</section>
+</body>
+</html>
